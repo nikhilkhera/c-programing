@@ -1,21 +1,23 @@
 #include<stdio.h>
-void input(int *n,int a[n])
+void noofterms(int*n)
 {
     printf("enter the no. of terms\n");
     scanf("%d",n);
+}
+void input(int n,int a[n])
+{
     printf("enter the terms\n");
-    for(int i=0;i<*n;i++)
+    for(int i=0;i<n;i++)
     {
         scanf("%d",a[i]);
     }
 }
-int add(int n,int a[n],int *sum)
+void add(int n,int a[n],int *sum)
 {
     sum=0;
     for(int i=0;i<n;i++)
     {
         sum=sum+a[i];
-        return sum;
     }
 }
 void output(int sum)
@@ -25,7 +27,9 @@ void output(int sum)
 void main()
 {
     int n,a[n],sum;
-    input(&n,&a[n]);
-    add(n,&a[n],&sum);
+    noofterms(&n);
+    input(n,&a[0]);
+    add(n,&a[0],&sum);
     output(sum);
 }
+
