@@ -1,0 +1,29 @@
+#include<stdio.h>
+void input(int *a,int *b,int *c)
+{
+    printf("enter three nos.\n");
+    scanf("%d%d%d",a,b,c);
+}
+void compare(int a,int b, int c,int *temp)
+{
+    c=*temp;
+    if(b<*temp)
+    {
+        b=*temp;
+    }
+    if(a<*temp)
+    {
+        a=*temp;
+    }
+}
+void output(int temp);
+{
+    printf("the smallest no. is %d", temp);
+}
+void main
+{
+    int a,b,c,temp;
+    input(&a,&b,&c);
+    compare(a,b,c,&temp);
+    output(temp);
+}
