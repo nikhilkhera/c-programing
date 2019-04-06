@@ -19,7 +19,7 @@ void getoutput(int a,int b,int c)
 void main()
 {
     int a,b,c;
-    getinput(a,b);
+    getinput(&a,&b);
     c=addtn(a,b);
     getoutput(a,b,c);
 }
