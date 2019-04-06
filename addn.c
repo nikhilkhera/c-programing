@@ -9,13 +9,13 @@ void input(int *n,int a[n])
         scanf("%d",a[i]);
     }
 }
-void add(int n,int a[n],int*sum)
+int add(int n,int a[n],int *sum)
 {
-    *sum=0;
+    sum=0;
     for(int i=0;i<n;i++)
     {
-        *sum=*sum+a[i];
-        
+        sum=sum+a[i];
+        return sum;
     }
 }
 void output(int sum)
@@ -26,6 +26,6 @@ void main()
 {
     int n,a[n],sum;
     input(&n,&a[n]);
-    add(n,a[n],&sum);
+    add(n,&a[n],&sum);
     output(sum);
 }
