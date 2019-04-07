@@ -1,0 +1,13 @@
+#include<stdio.h>
+void get_input(int *n1,int*d1,int*n2,int*d2)
+{
+    printf("enter the expression\n");
+    scanf("%d/%d+%d/%d",n1,d1,n2,d2);
+  
+}
+void main()
+{
+    int n1,d1,n2,d2;
+    get_input(&n1,&d1,&n2,&d2);
+    printf
+}
