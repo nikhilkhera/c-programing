@@ -9,16 +9,17 @@ void input(int n,int a[n])
     printf("enter the terms\n");
     for(int i=0;i<n;i++)
     {
-        scanf("%d",a[i]);
+        scanf("%d",&a[i]);
     }
 }
-void add(int n,int a[n],int *sum)
+int find_sum(int n,int a[n])
 {
-    sum=0;
+    int sum=0;
     for(int i=0;i<n;i++)
     {
         sum=sum+a[i];
     }
+    return sum;
 }
 void output(int sum)
 {
@@ -26,10 +27,10 @@ void output(int sum)
 }
 void main()
 {
-    int n,a[n],sum;
+    int n,sum;
     noofterms(&n);
-    input(n,&a[0]);
-    add(n,&a[0],&sum);
+    int a[n];
+    input(n,a);
+    sum = find_sum(n,a);
     output(sum);
 }
-
