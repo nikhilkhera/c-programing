@@ -23,11 +23,11 @@ int find_sum(int n,int a[n])
 }
 void output(int n,int a[n],int sum)
 {
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n-1;i++)
     {
         printf("%d+",a[i]);
     }
-    printf("=%d",sum);
+    printf("%d=%d",a[n-1],sum);
 
 }
 void main()
@@ -39,4 +39,3 @@ void main()
     sum = find_sum(n,a);
     output(n,a,sum);
 }
-
