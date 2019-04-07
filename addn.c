@@ -21,9 +21,14 @@ int find_sum(int n,int a[n])
     }
     return sum;
 }
-void output(int sum)
+void output(int n,int a[n],int sum)
 {
-    printf("the sum of numbers is %d\n",sum);
+    for(int i=0;i<n;i++)
+    {
+        printf("%d+",a[i]);
+    }
+    printf("=%d",sum);
+
 }
 void main()
 {
@@ -32,5 +37,6 @@ void main()
     int a[n];
     input(n,a);
     sum = find_sum(n,a);
-    output(sum);
+    output(n,a,sum);
 }
+
