@@ -3,7 +3,7 @@ struct term
 {
     int x;
     int y;
-}a[n]
+}a[n];
 void get_input1(int *n);
 {
     printf("enter the no. of terms\n");
@@ -15,6 +15,7 @@ void get_input2(int n)
     scanf("%d",n);
     for(int i=0;i<n;i++)
     scanf("%d/%d",&a[i].x,&a[i].y);
-    
+}
+void add frac(int n)
     
 "
