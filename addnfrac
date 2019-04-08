@@ -39,7 +39,6 @@ void add_frac(int n,int *nume, int *deno, struct term a[n]);
     cf=find_gcd(*nume,*deno);
     *nume=*nume/cf;
     *deno=*deno/cf;
-    }
 }
 void get_output(int nume,int deno)
 {
