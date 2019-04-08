@@ -17,12 +17,19 @@ void get_input2(int n)
     scanf("%d/%d",&a[i].x,&a[i].y);
 }
 void add_frac(int n,int *nume, int *deno);
-{   deno=a[0].y;
-    nume=a[0].x;
+{   
+    int cf;
+    *deno=a[0].y;
+    *nume=a[0].x;
     for(int i=0;i<n-1;i++)
-    {   nume=nume*a[i+1].y+a[i+1].x*deno;
-        deno=deno*a[i].y;
+    {   *nume=*nume*a[i+1].y+a[i+1].x*(*deno);
+        *deno=*deno*a[i].y;
     }
+    cf=gcd(*nume,*deno);
+    *nume=*nume/cf;
+    *deno=*deno/cf;
+    
+ }
 
         
 
