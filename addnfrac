@@ -3,5 +3,14 @@ struct term
 {
     int x;
     int y;
+}a[n]
+void get_input1(int *n);
+{
+    printf("enter the no. of terms\n");
+    scanf("%d",n);
 }
-void input()
+void{
+    
+    printf("enter the terms\n");
+    for(int i=0;i<n
+"
