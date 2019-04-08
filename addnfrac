@@ -3,13 +3,13 @@ struct term
 {
     int x;
     int y;
-}a[n];
+};
 void get_input1(int *n);
 {
     printf("enter the no. of terms\n");
     scanf("%d",n);
 }
-void get_input2(int n)
+void get_input2(int n,struct term a[n])
 {
     printf("enter the terms\n");
     scanf("%d",n);
@@ -27,7 +27,7 @@ int find_gcd(int p,int q);
     }
     returm a;
 }
-void add_frac(int n,int *nume, int *deno);
+void add_frac(int n,int *nume, int *deno, struct term a[n]);
 {   
     int cf;
     *deno=a[0].y;
@@ -43,9 +43,22 @@ void add_frac(int n,int *nume, int *deno);
 }
 void get_output(int nume,int deno)
 {
-    printf("the sum of fracions is
+    printf("the sum of fracions =\n");
+    for(int i=0;i<n;i++)
+    printf("%d/%d",nume,deno);
+}    
 void main()
-{int n,nume,deno;
+{
+    int n,nume,deno;
+    get_input1(&n);
+    struct term a[n];
+    get_input2(n,a);
+    add_frac(n,&nume,&deno,a);
+    get_output(nune,deno);
+}
+
+
+
  
 
         
