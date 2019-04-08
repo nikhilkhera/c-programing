@@ -14,7 +14,9 @@ void get_input2(int n,struct term a[n])
     printf("enter the expression\n");
     scanf("%d",n);
     for(int i=0;i<n;i++)
-    scanf("%d/%d+",&a[i].x,&a[i].y);
+    {
+        scanf("%d/%d+",&a[i].x,&a[i].y);
+    }
     printf("/n");
 }
 int find_gcd(int a,int b);
