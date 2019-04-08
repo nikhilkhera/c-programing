@@ -41,8 +41,11 @@ void add_frac(int n,int *nume, int *deno);
     *deno=*deno/cf;
     }
 }
+void get_output(int nume,int deno)
+{
+    printf("the sum of fracions is
 void main()
-{int n
+{int n,nume,deno;
  
 
         
