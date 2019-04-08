@@ -9,8 +9,12 @@ void get_input1(int *n);
     printf("enter the no. of terms\n");
     scanf("%d",n);
 }
-void{
-    
+void get_input2(int n)
+{
     printf("enter the terms\n");
-    for(int i=0;i<n
+    scanf("%d",n);
+    for(int i=0;i<n;i++)
+    scanf("%d/%d",&a[i].x,&a[i].y);
+    
+    
 "
