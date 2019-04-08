@@ -41,6 +41,8 @@ void add_frac(int n,int *nume, int *deno);
     *deno=*deno/cf;
     }
 }
+void main()
+{int n
  
 
         
