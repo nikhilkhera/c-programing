@@ -14,7 +14,7 @@ void get_input2(int n,struct term a[n])
     printf("enter the terms\n");
     scanf("%d",n);
     for(int i=0;i<n;i++)
-    scanf("%d/%d",&a[i].x,&a[i].y);
+    scanf("%d/%d+",&a[i].x,&a[i].y);
 }
 int find_gcd(int a,int q);
 {
@@ -25,7 +25,7 @@ int find_gcd(int a,int q);
         if(a<b)
         b=b-a;
     }
-    returm a;
+    return a;
 }
 void add_frac(int n,int *nume, int *deno, struct term a[n]);
 {   
@@ -43,8 +43,6 @@ void add_frac(int n,int *nume, int *deno, struct term a[n]);
 }
 void get_output(int nume,int deno)
 {
-    printf("the sum of fracions =\n");
-    for(int i=0;i<n;i++)
     printf("%d/%d",nume,deno);
 }    
 void main()
