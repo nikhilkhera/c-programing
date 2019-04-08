@@ -17,7 +17,6 @@ void get_input2(int n,struct term a[n])
     {
         scanf("%d/%d+",&a[i].x,&a[i].y);
     }
-    printf("/n");
 }
 int find_gcd(int a,int b);
 {
