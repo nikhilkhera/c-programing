@@ -23,7 +23,7 @@ nume=0;
     for(int i=0;i<n;i++)
     {
         deno=deno*a[i].y;
-        if(i<
+        if(i<n)
         nume=nume*a[i+1].y+a[i+1].x*deno;
     }
 
