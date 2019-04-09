@@ -11,10 +11,10 @@ void get_input1(int *n);
 }
 void get_input2(int n,struct term a[n])
 {
-    printf("enter the expression\n");
+    printf("enter the terms:\n");
     for(int i=0;i<n;i++)
     {
-        scanf("%d/%d+",&a[i].x,&a[i].y);
+        scanf("%d/%d",&a[i].x,&a[i].y);
     }
 }
 int find_gcd(int a,int b);
@@ -34,7 +34,8 @@ void add_frac(int n,int *nume, int *deno, struct term a[n]);
     *deno=a[0].y;
     *nume=a[0].x;
     for(int i=0;i<n-1;i++)
-    {   *nume=*nume*a[i+1].y+a[i+1].x*(*deno);
+    { 
+        *nume=*nume*a[i+1].y+a[i+1].x*(*deno);
         *deno=*deno*a[i].y;
     }
     cf=find_gcd(*nume,*deno);
@@ -43,7 +44,11 @@ void add_frac(int n,int *nume, int *deno, struct term a[n]);
 }
 void get_output(int nume,int deno)
 {
-    printf("%d/%d",nume,deno);
+    for(int i=0;i<n-1;i++)
+    {
+        printf("%d/%d+",a[i].x,a[i].y);
+    }
+    printf("%d/%d=%d/%d",a[n-1].x,a[n-1].y,nume,deno);
 }    
 void main()
 {
