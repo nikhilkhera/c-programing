@@ -15,9 +15,9 @@ float find_ncr(float n, float r)
     }
     return ncr;
 }
-void get_output(float n,int r, float ncr)
+void get_output(int n,int r, int ncr)
 {
-    printf("the vlue of %fC%f is %f",n,r,ncr);
+    printf("the vlue of%dC%dis %d",n,r,ncr);
 }
 void main()
 {
