@@ -7,29 +7,26 @@ void get_input(int *n,int *r)
 float find_ncr(int  n, int r)
 { 
     int x;
-    float ncr;
+    float ncr=1 ;
     x=n-r;
-    while(n!=0 && r!=0 && x!=0)
+    if(r>0 && x>0)
     {
-        ncr=ncr*(float)n/(r*x);
-        n--;
-        r--;
-        x--;
-        if(n!=0 && r!=0 && x!=0)
+        while(n>1 || r>1 || x>1)
         {
-            if(n==0)
+            ncr=ncr*(float)n/(r*x);
+            if(n>1)
             {
-                n++;
-            }
-            if(r==0)
+                n--;
+            }    
+            if(r>1)
             {
-                r++;
+                r--;
             }
-            if(x==0)
+            if(x>1)
             {
-                x++;
+                x--;
             }
-        }   
+        }  
     }
     return ncr;
     
